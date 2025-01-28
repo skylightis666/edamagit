@@ -127,5 +127,5 @@ function fetchAll({ repository, switches }: MenuState) {
 }
 
 async function pickSubmodule(repository: MagitRepository, prompt: string): Promise<string | undefined> {
-  return await window.showQuickPick(repository.submodules.map(r => r.name), { placeHolder: prompt });
+  return await window.showQuickPick(repository.submodules.map(r => r.path), { placeHolder: prompt });
 }
